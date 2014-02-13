@@ -415,8 +415,7 @@ public class PMS {
 		displayBanner();
 
 		AutoUpdater autoUpdater = null;
-
-		if (configuration.isAutoUpdate()) {
+		if (Build.isUpdatable()) {
 			String serverURL = Build.getUpdateServerURL();
 			autoUpdater = new AutoUpdater(serverURL, getVersion());
 		}
